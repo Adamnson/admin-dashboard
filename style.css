@@ -1,0 +1,59 @@
+body {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+ul {
+  list-style: none;
+}
+
+.sidebar {
+  background-color: skyblue;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+
+.header {
+  border: 4px dashed green;
+}
+
+.line-1 {
+  display: inline-grid;
+  grid-template-columns: 5fr 1fr 1fr 3fr;
+  border: 2px dotted yellow;
+}
+
+.line-2 {
+  display: flex;
+  justify-content: space-between;
+  border: 2px dotted yellow;
+}
+
+.dashboard {
+  border: 4px dashed green;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+}
+
+.projects {
+  border: 2px dotted orange;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(200px, 500px));
+  height: 90%;
+}
+
+.misc {
+  border: 2px dotted orange;
+}
+
+.announcements {
+  border: 1px dotted blue;
+}
+
+.trending {
+  border: 1px dotted blue;
+}
