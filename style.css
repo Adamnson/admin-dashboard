@@ -73,4 +73,30 @@ li  > img {
   position: relative;
   left: max(-1rem, -10%,-1.5rem);
   vertical-align: middle;
+  top: -0.4rem;
+}
+
+#search-icon,
+#notification-icon {
+  max-height: 1.2rem;
+  padding: 0.25rem;
+  vertical-align: middle;
+}
+
+#search-bar {
+  padding : 0.25rem;
+  border-radius: 1rem;
+}
+
+.button-array {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 5rem;
+  background-color: orange;
+  color: green;
+  margin-inline: 0.25rem;
+  border-radius: 0.5rem;
 }
