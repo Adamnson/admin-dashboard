@@ -10,6 +10,7 @@ ul {
 .sidebar {
   background-color: skyblue;
   height: 100vh;
+  min-width: 10rem;
 }
 
 .container {
@@ -56,4 +57,20 @@ ul {
 
 .trending {
   border: 1px dotted blue;
+}
+
+/* images */
+
+#dash-img {
+  max-height: 1.5rem;
+  padding-inline: 0.75rem;
+}
+
+li  > img {
+  max-height: 1.2rem;
+  padding: 0.25rem;
+  margin-top: 0.5rem;
+  position: relative;
+  left: max(-1rem, -10%,-1.5rem);
+  vertical-align: middle;
 }
