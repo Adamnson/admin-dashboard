@@ -100,3 +100,30 @@ button {
   margin-inline: 0.25rem;
   border-radius: 0.5rem;
 }
+
+.project-card {
+  background-color: lightgrey;
+  margin: 0.5rem;
+  border-radius: 1.5rem;
+  padding-inline: 0.5rem;
+  padding-top: -4rem;
+}
+
+.icon-array {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.icon-array > img {
+  max-height: 1.2rem;
+  padding-inline: 0.66rem;
+}
+
+.announcements,
+.trending {
+  background-color: grey;
+  padding-inline: 2rem;
+  border-radius: 1rem;
+}
+
