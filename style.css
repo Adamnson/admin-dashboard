@@ -9,9 +9,11 @@ ul {
 
 .container {
   display: grid;
-  grid-template-rows: 1fr 7fr;
+  grid-template-rows: 1fr 5.5fr;
   min-width: 20rem;
   overflow: hidden;
+  position: absolute;
+  left: 10rem;
 }
 
 /*sidebar*/
@@ -19,11 +21,16 @@ ul {
   background-color: skyblue;
   height: 100%;
   min-width: 10rem;
+  position: absolute;
 }
 
 #dash-img {
   max-height: 1.5rem;
   padding-inline: 0.75rem;
+}
+
+.sidebar > ul  > li:hover {
+  scale: 1.1;
 }
 
 li  > img {
@@ -88,10 +95,14 @@ li  > img {
 
 button {
   width: 5rem;
-  background-color: orange;
-  color: green;
-  margin-inline: 0.25rem;
+  background-color: yellow;
+  color: magenta;
+  margin-inline: 0.5rem;
   border-radius: 0.5rem;
+  &:hover {
+    scale: 1.1;
+    box-shadow: 0.15rem 0.25rem 0.25rem magenta; 
+  }
 }
 
 /* dashboard */
@@ -104,8 +115,7 @@ button {
 .projects {
   border: 2px dotted orange;
   display: grid;
-  grid-template-columns: repeat(2,clamp(15rem,25vw,25rem));
-  height: 90%;
+  grid-template-columns: repeat(auto-fit,clamp(7rem,35vw,20rem));
   overflow: hidden;
 }
 
@@ -120,7 +130,8 @@ button {
   max-height: 20vh;
   &:hover {
     scale: 1.1;
-    box-shadow: 0.45rem 0.5rem 0.3rem magenta;
+    box-shadow: 0.45rem 0.75rem 0.75rem teal;
+    border-left: 0;
   }
 }
 
@@ -150,4 +161,22 @@ button {
   padding-inline: 2rem;
   border-radius: 1rem;
   border: 1px dotted blue;
+}
+
+.trending {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 2.5fr);
+  grid-gap: 0.5rem;
+}
+
+.user-card {
+  display: inline-grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+#trending-profile {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid white;
 }
