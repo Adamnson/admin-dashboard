@@ -7,59 +7,19 @@ ul {
   list-style: none;
 }
 
-.sidebar {
-  background-color: skyblue;
-  height: 100vh;
-  min-width: 10rem;
-}
-
 .container {
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 7fr;
+  min-width: 20rem;
+  overflow: hidden;
 }
 
-.header {
-  border: 4px dashed green;
+/*sidebar*/
+.sidebar {
+  background-color: skyblue;
+  height: 100%;
+  min-width: 10rem;
 }
-
-.line-1 {
-  display: inline-grid;
-  grid-template-columns: 5fr 1fr 1fr 3fr;
-  border: 2px dotted yellow;
-}
-
-.line-2 {
-  display: flex;
-  justify-content: space-between;
-  border: 2px dotted yellow;
-}
-
-.dashboard {
-  border: 4px dashed green;
-  display: grid;
-  grid-template-columns: 2.5fr 1fr;
-}
-
-.projects {
-  border: 2px dotted orange;
-  display: grid;
-  grid-template-columns: repeat(2,minmax(200px, 500px));
-  height: 90%;
-}
-
-.misc {
-  border: 2px dotted orange;
-}
-
-.announcements {
-  border: 1px dotted blue;
-}
-
-.trending {
-  border: 1px dotted blue;
-}
-
-/* images */
 
 #dash-img {
   max-height: 1.5rem;
@@ -76,6 +36,32 @@ li  > img {
   top: -0.4rem;
 }
 
+/* header */
+.header {
+  border: 4px dashed green;
+  background-color: whitesmoke;}
+
+.line-1 {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: 15fr 1fr 1fr 3fr;
+  border: 2px dotted yellow;
+}
+
+.line-2 {
+  display: flex;
+  justify-content: space-between;
+  border: 2px dotted yellow;
+}
+
+#profile-image {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 1rem;
+}
+
 #search-icon,
 #notification-icon {
   max-height: 1.2rem;
@@ -83,9 +69,16 @@ li  > img {
   vertical-align: middle;
 }
 
+#notification-icon {
+  padding-top: 1.5rem;
+}
+
 #search-bar {
   padding : 0.25rem;
   border-radius: 1rem;
+  width: clamp(5rem, 32vw, 20rem);
+  margin-top: 1.5rem;
+  margin-left: 1rem;
 }
 
 .button-array {
@@ -101,12 +94,39 @@ button {
   border-radius: 0.5rem;
 }
 
+/* dashboard */
+.dashboard {
+  border: 4px dashed green;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+}
+
+.projects {
+  border: 2px dotted orange;
+  display: grid;
+  grid-template-columns: repeat(2,clamp(15rem,25vw,25rem));
+  height: 90%;
+  overflow: hidden;
+}
+
 .project-card {
-  background-color: lightgrey;
-  margin: 0.5rem;
-  border-radius: 1.5rem;
-  padding-inline: 0.5rem;
+  background-color: lightgrey; 
+  border-radius: 0.8rem;
+  border-left: 0.65rem solid teal;
+  margin: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 0.5rem;
   padding-top: -4rem;
+  max-height: 20vh;
+  &:hover {
+    scale: 1.1;
+    box-shadow: 0.45rem 0.5rem 0.3rem magenta;
+  }
+}
+
+.project-card > p {
+  max-height: 30%;
+  overflow: hidden;
 }
 
 .icon-array {
@@ -120,10 +140,14 @@ button {
   padding-inline: 0.66rem;
 }
 
+.misc {
+  border: 2px dotted orange;
+}
+
 .announcements,
 .trending {
   background-color: grey;
   padding-inline: 2rem;
   border-radius: 1rem;
+  border: 1px dotted blue;
 }
-
