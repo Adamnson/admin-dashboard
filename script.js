@@ -1,10 +1,5 @@
-function toggleClassList(obj) {
-  console.log("click registered");
-  obj.classList.toggle("selected");
-}
-
 function toggleFav() {
-  toggleClassList(this);
+  this.classList.toggle("selected");
   if (this.classList.contains("selected")){
     this.src = "resources/star-minus-outline.svg";
   }
@@ -14,7 +9,7 @@ function toggleFav() {
 }
 
 function toggleWatch() {
-  toggleClassList(this);
+  this.classList.toggle("selected");
   if (this.classList.contains("selected")){
     this.src = "resources/eye-minus-outline.svg";
   }
@@ -25,7 +20,7 @@ function toggleWatch() {
 
 
 function toggleBranch() {
-  toggleClassList(this);
+  this.classList.toggle("selected");
   if (this.classList.contains("selected")){
     this.src = "resources/source-branch-minus.svg";
   }
@@ -36,7 +31,6 @@ function toggleBranch() {
 
 
 var stars = document.querySelectorAll("#fav");
-console.log(stars);
 stars.forEach(function(el) {
   el.addEventListener("click", toggleFav );
 });
